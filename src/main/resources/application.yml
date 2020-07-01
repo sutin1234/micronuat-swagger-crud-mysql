@@ -1,0 +1,21 @@
+micronaut:
+  application:
+    name: demo
+  server:
+    port: 8089
+#    context-path: /api/v1
+  router:
+    static-resources:
+      swagger:
+        paths: classpath:META-INF/swagger
+        mapping: /swagger/**
+      swagger-ui:
+        paths: classpath:META-INF/swagger/views/swagger-ui
+        mapping: /docs/swagger-ui/**
+
+  datasources:
+    default:
+      url: jdbc:mariadb://localhost:3306/micronuat_crud
+      username: root
+      password:
+      driverClassName: org.mariadb.jdbc.Driver
